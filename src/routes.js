@@ -1,5 +1,5 @@
 import Favoritos from "pages/Favoritos";
-import Inicio from "./pages/Inicio"
+import Inicio from "pages/Inicio"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PaginaBase from "pages/PaginaBase";
 import Player from "pages/Player";
