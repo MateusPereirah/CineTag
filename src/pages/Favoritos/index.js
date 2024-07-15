@@ -1,11 +1,11 @@
-import styles from "./Favoritos.module.css";
+import styles from "./Favorito.module.css";
 import Banner from "components/Banner";
 import Card from "components/Card";
 import Titulo from "components/Titulo";
-import { useFavoritosContext } from "contexts/Favoritos";
+import { useFavoritoContext } from "contexts/Favorito";
 
-function Favoritos(){
-    const {favorito} = useFavoritosContext();
+function Favorito(){
+    const { favorito } = useFavoritoContext();
 
     return(
         <>
@@ -14,14 +14,12 @@ function Favoritos(){
                 <h1>Meus Favoritos</h1>
             </Titulo>
             <section className={styles.container}>
-                {
-                    favorito.map((fav) => {
-                        return <Card {...fav} key={fav.id} />
-                    })
-                };
+                {favorito.map((fav) => {
+                        return <Card {...fav} key={fav.id} />;
+                })}
             </section>
         </>
     );
 }
 
-export default Favoritos;
+export default Favorito;

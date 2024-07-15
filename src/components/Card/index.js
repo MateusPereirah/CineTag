@@ -1,11 +1,11 @@
-import { useFavoritosContext } from 'contexts/Favoritos';
+import { useFavoritoContext } from 'contexts/Favorito';
 import styles from './Card.module.css';
 import iconeFavoritar from './favoritar.png'
 import iconeDesfavoritar from './desfavoritar.png'
 
 
 function Card({id, titulo, capa}){
-    const {favorito, adicionarFavorito} = useFavoritosContext();
+    const {favorito, adicionarFavorito}= useFavoritoContext();
 
     const ehFavorito = favorito.some((fav) => fav.id === id)
 
